@@ -1,6 +1,5 @@
 pipeline {
 
-```
 agent any
 
 tools {
@@ -129,6 +128,5 @@ post {
         echo "결과: ${currentBuild.currentResult}"
     }
 }
-```
 
 }
