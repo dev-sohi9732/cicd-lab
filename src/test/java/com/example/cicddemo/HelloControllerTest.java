@@ -10,7 +10,7 @@ private final HelloController controller = new HelloController();
 
 @Test
 void hello_returnsGreeting() {
-    assertEquals("WRONG VALUE", controller.hello());
+    assertEquals("Hello CI/CD - v1", controller.hello());
 }
 
 @Test
