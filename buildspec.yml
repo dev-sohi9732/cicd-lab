@@ -1,0 +1,14 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      java: corretto21
+  build:
+    commands:
+      - echo "===== CodeBuild 빌드 시작 ====="
+      - mvn -B clean package        # 테스트 포함 (실패 시 빌드 실패 → 배포 차단)
+artifacts:
+  files:
+    - target/*.jar
+    - appspec.yml
+    - scripts/**/*
